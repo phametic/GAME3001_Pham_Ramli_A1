@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "StateManager.h"
 #include "States.h"
+#include "Game.h"
 
 /* Ram 11/19/14 
 *
@@ -17,6 +18,9 @@ int main()
    
    MainMenu state0;
    states.push_back(&state0);
+
+   Game state1;
+   states.push_back(&state1);
 
    while (screenState >= 0)
 	{

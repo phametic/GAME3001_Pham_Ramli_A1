@@ -9,16 +9,16 @@ MainMenu::MainMenu()
 	selection = 0;
 
 	playText.setString("Play");
-	playText.setSize(25);
-	playText.setPosition((GAME_WIDTH / 2) - 25, GAME_HEIGHT / 2);
+	playText.setSize(35);
+	playText.setPosition((GAME_WIDTH / 2) - 75, (GAME_HEIGHT / 2) - 50);
 
 	helpText.setString("Help");
-	helpText.setSize(25);
-	helpText.setPosition((GAME_WIDTH / 2) - 25, (GAME_HEIGHT / 2) + 50);
+	helpText.setSize(35);
+	helpText.setPosition((GAME_WIDTH / 2) - 75, (GAME_HEIGHT / 2));
 
 	closeText.setString("Close");
-	closeText.setSize(25);
-	closeText.setPosition((GAME_WIDTH / 2) - 25, (GAME_HEIGHT / 2) + 100);
+	closeText.setSize(35);
+	closeText.setPosition((GAME_WIDTH / 2) - 75, (GAME_HEIGHT / 2) + 50);
 }
 
 int MainMenu::Run(sf::RenderWindow &window)

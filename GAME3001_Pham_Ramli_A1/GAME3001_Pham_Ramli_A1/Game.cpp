@@ -38,10 +38,10 @@ void Game::processEvents(sf::RenderWindow &window)
 		switch (event.type)
 		{
 			case sf::Event::KeyPressed:
-			//player.handlePlayerInput(event.key.code, true);
+			player.handlePlayerInput(event.key.code, true);
 			break;
 			case sf::Event::KeyReleased:
-			//player.handlePlayerInput(event.key.code, false);
+			player.handlePlayerInput(event.key.code, false);
 			break;
 			case sf::Event::Closed:
 			window.close();
@@ -52,13 +52,13 @@ void Game::processEvents(sf::RenderWindow &window)
 
 void Game::Update(sf::Time deltaTime)
 {
-
+	player.Update(deltaTime);
 }
 
 void Game::Render(sf::RenderWindow &window)
 {
 	window.clear();
-
+	player.Render(window);
 	window.display();
 }
 

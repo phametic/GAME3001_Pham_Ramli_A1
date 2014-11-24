@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include "StateManager.h"
+#include "Player.h"
 
 class Game : public StateManager
 {
@@ -13,7 +14,7 @@ public:
 	void processEvents(sf::RenderWindow &window);
 
 private:
-
+	Player player;
 };
 
 #endif

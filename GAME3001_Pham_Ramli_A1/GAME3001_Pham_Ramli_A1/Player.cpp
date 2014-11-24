@@ -10,13 +10,15 @@ Player::Player()
 	health = 10;
 	isActive = true;
 
-	playerTexture.loadFromFile("Assets/Images/player.bmp");
-	playerSprite.setTexture(playerTexture);
-	playerSprite.setPosition(Position);
 	IsMovingUp = false;
 	IsMovingDown = false;
 	IsMovingLeft = false;
 	IsMovingRight = false;
+	IsShootingBullet = false;
+
+	playerTexture.loadFromFile("Assets/Images/player.bmp");
+	playerSprite.setTexture(playerTexture);
+	playerSprite.setPosition(Position);
 }
 
 

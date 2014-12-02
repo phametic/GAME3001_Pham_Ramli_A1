@@ -4,7 +4,7 @@ Player::Player()
 	: decel(0.8f) 
 	, maxVelocity(400.f,400.f)
 	, velocity(0.f,0.f)
-	, Position (400.f, 300.f)
+	, Position (100.f, 300.f)
 {
 	playerSpeed = 100;
 	health = 10;
@@ -16,9 +16,10 @@ Player::Player()
 	IsMovingRight = false;
 	IsShootingBullet = false;
 
-	playerTexture.loadFromFile("Assets/Images/player.bmp");
+	playerTexture.loadFromFile("Assets/Images/player.png");
 	playerSprite.setTexture(playerTexture);
 	playerSprite.setPosition(Position);
+	playerSprite.setScale(2.0f, 2.0f);
 }
 
 
@@ -47,7 +48,7 @@ void Player::Update(sf::Time elapsedTime)
 				velocity.y *= decel; 
 			}
 	if (IsMovingDown) {
-				if(playerSprite.getPosition().y > GAME_HEIGHT - 70)
+				if(playerSprite.getPosition().y > GAME_HEIGHT - 100)
 					velocity.y = 0;
 				else
 				velocity.y += playerSpeed;
